@@ -4,7 +4,7 @@ Simple script that outputs server stats to a file.
 Part of the DevOps roadmap:
 https://roadmap.sh/projects/server-stats
 
-Requirements
+## Requirements
 You are required to write a script server-stats.sh that can analyse basic server performance stats. You should be able to run the script on any Linux server and it should give you the following stats:
 
 Total CPU usage
