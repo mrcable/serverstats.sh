@@ -19,20 +19,19 @@ echo ""
 
 # Disk usage
 echo Disk usage
-DISK_USAGE=$(df -h --total | grep 'total' | awk '{printf "Used: %s, Free: %s (%.2f%% used)", $3, $4, $5}')
+DISK_USAGE=$(df -h --total | grep 'total' | awk '{printf "Used: %s Free: %s (%.2f%% used)", $3, $4, $5}')
 echo $DISK_USAGE
 
 echo ""
 
 # most cpu-heavy processes
 echo Top 5 processes by CPU usage
-TOP_5_CPU=$(ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6)
-echo $TOP_5_CPU
+ps -eo pid,comm,%cpu --sort=-%cpu | head -n 6
+
 echo ""
 
 echo Top 5 processes by memory usage
-TOP_5_MEM=$(ps -eo pid,comm,%mem --sort=-%mem | head -n 6)
-echo $TOP_5_MEM
+ps -eo pid,comm,%mem --sort=-%mem | head -n 6
 
 echo 
 
@@ -42,6 +41,6 @@ echo $LOGGED_IN_USERS
 
 echo
 
-echo Upotime
+echo Uptime
 UPTIME=$(uptime -p)
 echo Uptime: $UPTIME
