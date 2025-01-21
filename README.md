@@ -4,12 +4,25 @@ Simple script that outputs server stats to a file.
 Part of the DevOps roadmap:
 https://roadmap.sh/projects/server-stats
 
-## Requirements
-You are required to write a script server-stats.sh that can analyse basic server performance stats. You should be able to run the script on any Linux server and it should give you the following stats:
+## Features
+The tool runs on basically anything. It prints out the following information:
+- Total CPU percentage in use
+- Total RAM in use vs the total amount, including percentage
+- Top 5 CPU heavy processes
+- Top 5 processes according to RAM usage
+- The usernames and total logged in users on the machine
+- The current uptime of the machine
 
-- Total CPU usage
-- Total memory usage (Free vs Used including percentage)
-- Total disk usage (Free vs Used including percentage)
-- Top 5 processes by CPU usage
-- Top 5 processes by memory usage
-- Stretch goal: Feel free to optionally add more stats such as os version, uptime, load average, logged in users, failed login attempts etc.
+# How to run
+This script can be copied over manually, cloned using `git clone` or downloaded using `curl`.
+
+## curl
+`bash <(curl -s https://raw.githubusercontent.com/mrcable/serverstats.sh/refs/heads/main/serverstats.sh)`
+
+## cloning
+``` bash
+git clone https://github.com/mrcable/serverstats.sh.git
+cd serverstats.sh
+chmod +x serverstats.sh
+./serverstats.sh
+```
